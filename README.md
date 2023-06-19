@@ -17,9 +17,9 @@
   
 #### Project Introduction  
 1. Project
+Micro Service Architecture를 이해하고, MSA 환경에서 운영되는 웹 어플린케이션을 만들어 보자.
 
-
-2. 목표
+3. 목표
 - 확장 가능한 Micro Service Architecture 환경 만들기
 - 재사용 가능한 Web Application 모듈 만들기
 - Docker를 활용해 컨테이너 기반 모듈 만들기
