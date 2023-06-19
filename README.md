@@ -16,8 +16,9 @@
 - *주현준*
   
 #### Project Introduction  
-1. Project
-Micro Service Architecture를 이해하고, MSA 환경에서 운영되는 웹 어플린케이션을 만들어 보자.
+1. Project  
+
+   Micro Service Architecture를 이해하고, MSA 환경에서 운영되는 웹 어플리케이션을 만들어 보자.
 
 3. 목표
 - 확장 가능한 Micro Service Architecture 환경 만들기
