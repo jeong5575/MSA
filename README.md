@@ -27,6 +27,7 @@
 3. 개발환경  
 - React
 - Node.js
+- Flask
 - Nginx
 - Git Hub
 - Docker
