@@ -35,4 +35,4 @@
 - AWS EC2
 
 #### Project Web URL  
-http://ec2-13-209-48-5.ap-northeast-2.compute.amazonaws.com:8000/  
+http://15.165.77.169:2000/
