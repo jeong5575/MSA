@@ -30,6 +30,8 @@
 - React
 - Node.js
 - Flask
+- MongoDB
+- MariaDB
 - Nginx
 - Git Hub
 - Docker
