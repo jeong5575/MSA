@@ -24,7 +24,7 @@
 - 재사용 가능한 Web Application 모듈 만들기
 - Docker를 활용해 컨테이너 기반 모듈 만들기
 - Nginx를 활용해 API Gateway 만들기
-- CI/CD pipeline 작성하기
+- GitHub Actions CI/CD Pipeline을 통한 자동화
 
 4. 개발환경
 - React
