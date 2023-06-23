@@ -18,7 +18,7 @@
 #### Project Introduction  
 1. Project  
 
-   Micro Service Architecture를 이해하고, MSA 환경에서 운영되는 웹 어플리케이션을 만들어 보자.
+   Flask 웹 어플리케이션을 만들어 보고, 
 
 3. 목표
 - Flask Web Application  만들기
