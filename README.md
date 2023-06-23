@@ -21,17 +21,13 @@
    Micro Service Architecture를 이해하고, MSA 환경에서 운영되는 웹 어플리케이션을 만들어 보자.
 
 3. 목표
-- 확장 가능한 Micro Service Architecture 환경 만들기
-- 재사용 가능한 Web Application 모듈 만들기
+- Flask Web Application  만들기
 - Docker를 활용해 컨테이너 기반 모듈 만들기
 - Nginx를 활용해 API Gateway 만들기
 - GitHub Actions CI/CD Pipeline을 통한 자동화
 
 4. 개발환경
-- React
-- Node.js
 - Flask
-- MongoDB
 - MariaDB
 - Nginx
 - Git Hub
