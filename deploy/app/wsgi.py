@@ -105,7 +105,7 @@ def hello_world(): # 함수
 
     cursor.close()
     conn.close()
-    hostname = socket.gethostname()
+    hostname = socket.gethostname() #호스트 정보를 받아와서 저장
     return render_template('index.html', use_name=name, fortune=luck ,hostname = hostname )
 
 	
