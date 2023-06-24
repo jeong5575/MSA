@@ -105,9 +105,9 @@ def hello_world(): # 함수
 
     cursor.close()
     conn.close()
-    print(socket.gethostname())
-    return render_template('index.html', use_name=name, fortune=luck)
-        
+    hostname = socket.gethostname()
+    return render_template('index.html', use_name=name, fortune=luck ,hostname = hostname )
+
 	
 
 @app.route('/login', methods=['GET', 'POST'])
