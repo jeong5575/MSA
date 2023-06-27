@@ -2,19 +2,26 @@
 <html>
 <head>
     <title>스터디모집 게시판</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie.min.js"></script>
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;700&display=swap');
+
       header {
         text-align: center;
       }
       
-      header img {
-        width: 100px;
+      header .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100px;
         cursor: pointer; /* 로고 이미지에 마우스 커서 변경 */
       }
       
       body {
-        font-family: Arial, sans-serif;
-        background-color: #EBE8A6;
+        font-family: 'Pretendard', Arial, sans-serif;
+        background-color: #FFFEDE;
         margin: 0;
         padding: 20px;
       }
@@ -80,7 +87,7 @@
       }
       
       .search-box input[type="submit"] {
-        background-color: #E89924;
+        background-color: #EE8F00;
         color: white;
         padding: 10px 20px;
         font-size: 16px;
@@ -90,7 +97,7 @@
       }
   
       .ask-button {
-        background-color: #E89924;
+        background-color: #EE8F00;
         color: white;
         padding: 10px 20px;
         font-size: 16px;
@@ -103,7 +110,8 @@
 </head>
 <header>
   <a href="/home"> <!-- 로고 이미지 클릭 시 index.html로 이동 -->
-    <img src="static/logo.png" alt="로고">
+    <div class="logo" id="logo-animation">
+    </div>
   </a>
 </header>
 <body>
@@ -129,6 +137,14 @@
     </ul>
   </div>
   <script>
+    var animation = bodymovin.loadAnimation({
+      container: document.querySelector('#logo-animation'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'https://assets10.lottiefiles.com/packages/lf20_qqt9hvgz.json'
+    });
+
     function new_free() {
       location = "{{ url_for('new_study') }}";
     }

@@ -6,7 +6,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #CDF2EA;
+      background-color: #E5F5F1;
       margin: 0;
       padding: 20px;
     }
@@ -47,6 +47,11 @@
       border-radius: 5px;
       padding: 10px;
       margin-bottom: 10px;
+      width: 550px;
+      font-size: 14px;
+      word-wrap: break-word;
+      white-space: pre-line;
+      margin-top: 0;
     }
     
     form {
@@ -78,7 +83,7 @@
     }
     
     .btn-primary {
-      background-color: #007157;
+      background-color: #007E58;
       color: white;
       border-radius: 3px;
       border: none;
@@ -88,11 +93,11 @@
     }
     
     .btn-primary:hover {
-      background-color: #007157;
+      background-color: #007E58;
     }
     
     .btn-danger {
-      background-color: #007157;
+      background-color: #007E58;
       color: white;
       border-radius: 3px;
       border: none;
@@ -102,7 +107,7 @@
     }
     
     .btn-danger:hover {
-      background-color: #007157;
+      background-color: #007E58;
     }
     
     .post-title {
@@ -151,10 +156,9 @@
   </div>
   <div class="post-container">
     <h1 class="post-title">{{ notice[1] }}</h1>
-    <p class="author">작성자: {{ notice[2] }}</p>
+    <p class="author">작성자: {{ notice[5] }}</p>
     <p class="date">작성일시: {{ notice[4] }}</p>
-    <div class="content">{{ notice[3] }}</div>
-
+    <div class="content"> {{ notice[3] | safe }}</div> 
     <!-- 게시글 수정 버튼 -->
     {% if notice[2] == session['email'] %}
       <form method="get" action="{{ url_for('edit_notice', post_id=notice[0]) }}">

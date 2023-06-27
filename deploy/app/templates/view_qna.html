@@ -4,9 +4,11 @@
   <title>{{ qna[1] }}</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;700&display=swap');
+    
     body {
-      font-family: Arial, sans-serif;
-      background-color: #B3C1F4;
+      font-family: 'Pretendard', Arial, sans-serif;
+      background-color: #DEE5FF;
       margin: 0;
       padding: 20px;
     }
@@ -47,6 +49,11 @@
       border-radius: 5px;
       padding: 10px;
       margin-bottom: 10px;
+      width: 550px;
+      font-size: 14px;
+      word-wrap: break-word;
+      white-space: pre-line;
+      margin-top: 0;
     }
     
     form {
@@ -78,7 +85,7 @@
     }
     
     .btn-primary {
-      background-color: #556EC9;
+      background-color: #1F47D6;
       color: white;
       border-radius: 3px;
       border: none;
@@ -88,11 +95,11 @@
     }
     
     .btn-primary:hover {
-      background-color: #556EC9;
+      background-color: #1F47D6;
     }
     
     .btn-danger {
-      background-color: #556EC9;
+      background-color: #1F47D6;
       color: white;
       border-radius: 3px;
       border: none;
@@ -102,7 +109,7 @@
     }
     
     .btn-danger:hover {
-      background-color: #556EC9;
+      background-color: #1F47D6;
     }
     
     .post-title {
@@ -151,10 +158,9 @@
   </div>
   <div class="post-container">
     <h1 class="post-title">{{ qna[1] }}</h1>
-    <p class="author">작성자: {{ qna[2] }}</p>
+    <p class="author">작성자: {{ qna[5] }}</p>
     <p class="date">작성일시: {{ qna[4] }}</p>
-    <div class="content">{{ qna[3] }}</div>
-
+    <div class="content"> {{ qna[3] | safe }}</div> 
     <!-- 게시글 수정 버튼 -->
     {% if qna[2] == session['email'] %}
       <form method="get" action="{{ url_for('edit_qna', post_id=qna[0]) }}">
@@ -174,7 +180,7 @@
     <ul>
       {% for comment in comments %}
         <li>
-          <p class="author">이메일: {{ comment[4] }}</p>
+          <p class="author">작성자: {{ comment[5] }}</p>
           <p class="date">작성일시: {{ comment[2] }}</p>
           <p class="comment-text">{{ comment[1] }}</p>
           {% if comment[4] == session['email'] %}
@@ -189,7 +195,7 @@
     <h2 class="comment-create-heading">댓글 작성</h2>
     <form class="comment-form" method="post" action="{{ url_for('view_qna', post_id=qna[0]) }}">
       <input type="text" name="author" value="{{ session['email'] }}" readonly style="display: none;">
-      <p class="author">이메일: {{ session['email'] }}</p>
+      <p class="author">작성자: {{ session['name'] }}</p>
       <textarea name="content" placeholder="댓글 내용" required></textarea><br>
       <input type="submit" value="댓글 작성" class="btn btn-primary">
     </form>
