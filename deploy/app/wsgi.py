@@ -1,7 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, session, abort
-import pymysql # 모듈 import
 import mariadb
-from datetime import datetime
 import bcrypt
 from datetime import datetime, timedelta
 import requests

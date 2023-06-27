@@ -15,9 +15,9 @@ services:
             - "80:80" #80번 포트를 80번 포트에 맵핑 시켜준다.
             - "443:443" #443번 포트를 443번 포트에 맵핑 시켜준다.
         volumes:
-            - ./nginx/nginx/nginx.conf:/etc/nginx/nginx.conf
+            - ./nginx/nginx.conf:/etc/nginx/nginx.conf
 
-            
+
             # - ./certbot/conf:/etc/letsencrypt
             # - ./certbot/www:/var/www/certbot
     # certbot:
